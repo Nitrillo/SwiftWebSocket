@@ -1809,13 +1809,7 @@ open class WebSocket: NSObject {
         }
         ws.ping()
     }
-}
 
-public func ==(lhs: WebSocket, rhs: WebSocket) -> Bool {
-    return lhs.id == rhs.id
-}
-
-extension WebSocket {
     /// The events of the WebSocket using a delegate.
     @objc
     public var delegate : WebSocketDelegate? {
@@ -1841,3 +1835,8 @@ extension WebSocket {
         send(data)
     }
 }
+
+public func ==(lhs: WebSocket, rhs: WebSocket) -> Bool {
+    return lhs.id == rhs.id
+}
+
