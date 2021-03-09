@@ -537,7 +537,7 @@ private class InnerWebSocket: Hashable {
     var _services = WebSocketService.None
     var _event = WebSocketEvents()
     var _eventDelegate: WebSocketDelegate?
-    var _binaryType = WebSocketBinaryType.uInt8Array
+    var _binaryType = WebSocketBinaryType.nsData
     var _readyState = WebSocketReadyState.connecting
     var _networkTimeout = TimeInterval(-1)
 
