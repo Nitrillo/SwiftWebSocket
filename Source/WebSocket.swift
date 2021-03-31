@@ -1739,6 +1739,11 @@ open class WebSocket: NSObject {
     open var readyState : WebSocketReadyState{
         return ws.readyState
     }
+
+    open func enableBackground() {
+        ws.services = WebSocketService.voIP
+    }
+
     /// Opens a deferred or closed WebSocket connection to a URL; this should be the URL to which the WebSocket server will respond.
     open func open(_ url: String){
         open(request: URLRequest(url: URL(string: url)!), subProtocols: [])
